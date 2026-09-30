@@ -1,0 +1,1028 @@
+/* =====================================================
+   1. VARIÁVEIS DO DESIGN SYSTEM
+   ===================================================== */
+
+:root {
+
+    /* CORES */
+
+    --cor-primaria: #2E7D32;
+    --cor-primaria-clara: #4CAF50;
+
+    --cor-secundaria: #FF9800;
+    --cor-secundaria-clara: #FFB74D;
+
+    --cor-fundo: #F5F5F5;
+    --cor-branca: #FFFFFF;
+
+    --cor-texto: #212121;
+    --cor-texto-secundario: #616161;
+
+    --cor-sucesso: #2E7D32;
+    --cor-erro: #D32F2F;
+    --cor-desabilitado: #BDBDBD;
+
+
+    /* TIPOGRAFIA */
+
+    --fonte-principal: Arial, sans-serif;
+
+    --tamanho-h1: 2.5rem;
+    --tamanho-h2: 2rem;
+    --tamanho-h3: 1.5rem;
+    --tamanho-h4: 1.25rem;
+    --tamanho-texto: 1rem;
+
+
+    /* ESPAÇAMENTOS */
+
+    --espaco-1: 4px;
+    --espaco-2: 8px;
+    --espaco-3: 16px;
+    --espaco-4: 24px;
+    --espaco-5: 32px;
+    --espaco-6: 48px;
+    --espaco-7: 64px;
+
+}
+
+
+/* =====================================================
+   2. CONFIGURAÇÕES GERAIS
+   ===================================================== */
+
+* {
+    box-sizing: border-box;
+}
+
+
+html {
+    scroll-behavior: smooth;
+}
+
+
+body {
+
+    margin: 0;
+
+    background-color: var(--cor-fundo);
+
+    color: var(--cor-texto);
+
+    font-family: var(--fonte-principal);
+
+    font-size: var(--tamanho-texto);
+
+    line-height: 1.6;
+
+}
+
+
+img {
+
+    max-width: 100%;
+
+    height: auto;
+
+    display: block;
+
+}
+
+
+a {
+
+    color: var(--cor-primaria);
+
+}
+
+
+h1 {
+    font-size: var(--tamanho-h1);
+}
+
+
+h2 {
+    font-size: var(--tamanho-h2);
+}
+
+
+h3 {
+    font-size: var(--tamanho-h3);
+}
+
+
+h4 {
+    font-size: var(--tamanho-h4);
+}
+
+
+/* =====================================================
+   3. HEADER
+   ===================================================== */
+
+header {
+
+    display: flex;
+
+    justify-content: space-between;
+
+    align-items: center;
+
+    padding: var(--espaco-3) var(--espaco-5);
+
+    background-color: var(--cor-branca);
+
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+
+    position: relative;
+
+    z-index: 100;
+
+}
+
+
+.logo img {
+
+    width: 150px;
+
+}
+
+
+/* =====================================================
+   4. MENU
+   ===================================================== */
+
+.menu {
+
+    display: flex;
+
+}
+
+
+.menu ul {
+
+    display: flex;
+
+    align-items: center;
+
+    gap: var(--espaco-3);
+
+    list-style: none;
+
+    margin: 0;
+
+    padding: 0;
+
+}
+
+
+.menu li {
+
+    position: relative;
+
+}
+
+
+.menu a {
+
+    text-decoration: none;
+
+    color: var(--cor-texto);
+
+    font-weight: bold;
+
+    padding: 8px 12px;
+
+}
+
+
+.menu a:hover {
+
+    color: var(--cor-primaria);
+
+}
+
+
+/* SUBMENU */
+
+.submenu {
+
+    display: none !important;
+
+    position: absolute;
+
+    top: 100%;
+
+    left: 0;
+
+    min-width: 200px;
+
+    background-color: var(--cor-branca);
+
+    padding: var(--espaco-2) !important;
+
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+
+}
+
+
+.dropdown:hover .submenu {
+
+    display: block !important;
+
+}
+
+
+.submenu li {
+
+    width: 100%;
+
+}
+
+
+.submenu a {
+
+    display: block;
+
+}
+
+
+/* BOTÃO HAMBÚRGUER */
+
+.menu-toggle {
+
+    display: none;
+
+    background: none;
+
+    border: none;
+
+    font-size: 28px;
+
+    cursor: pointer;
+
+}
+
+
+/* =====================================================
+   5. CONTAINER + GRID
+   ===================================================== */
+
+.container {
+
+    width: 90%;
+
+    max-width: 1200px;
+
+    margin: 0 auto;
+
+    display: grid;
+
+    grid-template-columns: repeat(12, 1fr);
+
+    gap: 24px;
+
+}
+
+
+.secao-completa {
+
+    grid-column: span 12;
+
+    margin-top: var(--espaco-6);
+
+    margin-bottom: var(--espaco-6);
+
+}
+
+
+/* =====================================================
+   6. HERO
+   ===================================================== */
+
+.hero {
+
+    min-height: 450px;
+
+    display: flex;
+
+    align-items: center;
+
+    padding: var(--espaco-7);
+
+    background-color: var(--cor-primaria);
+
+    color: var(--cor-branca);
+
+}
+
+
+.hero div {
+
+    max-width: 700px;
+
+    margin: 0 auto;
+
+}
+
+
+.hero h1 {
+
+    margin-top: 0;
+
+}
+
+
+/* =====================================================
+   7. CARDS
+   ===================================================== */
+
+.cards {
+
+    grid-column: span 12;
+
+    display: grid;
+
+    grid-template-columns: repeat(3, 1fr);
+
+    gap: var(--espaco-5);
+
+}
+
+
+.card-projeto {
+
+    display: flex;
+
+    flex-direction: column;
+
+    justify-content: space-between;
+
+    gap: var(--espaco-3);
+
+    padding: var(--espaco-4);
+
+    background-color: var(--cor-branca);
+
+    border-radius: 8px;
+
+    box-shadow: 0 3px 12px rgba(0, 0, 0, 0.1);
+
+}
+
+
+.card-projeto img {
+
+    width: 100%;
+
+    height: 200px;
+
+    object-fit: cover;
+
+    border-radius: 6px;
+
+}
+
+
+.card-info {
+
+    display: flex;
+
+    flex-direction: column;
+
+    gap: var(--espaco-2);
+
+}
+
+
+.card-info h3 {
+
+    margin: 0;
+
+}
+
+
+/* =====================================================
+   8. BADGES
+   ===================================================== */
+
+.badge {
+
+    display: inline-block;
+
+    width: fit-content;
+
+    padding: 4px 10px;
+
+    border-radius: 20px;
+
+    font-size: 0.875rem;
+
+    font-weight: bold;
+
+}
+
+
+.badge-ativo {
+
+    background-color: #E8F5E9;
+
+    color: #2E7D32;
+
+}
+
+
+/* =====================================================
+   9. BOTÕES
+   ===================================================== */
+
+button,
+.btn {
+
+    display: inline-block;
+
+    background-color: var(--cor-primaria);
+
+    color: var(--cor-branca);
+
+    border: 2px solid var(--cor-primaria);
+
+    padding: 12px 20px;
+
+    border-radius: 6px;
+
+    cursor: pointer;
+
+    text-decoration: none;
+
+    font-weight: bold;
+
+    transition: all 0.3s ease;
+
+}
+
+
+/* HOVER */
+
+button:hover,
+.btn:hover {
+
+    background-color: var(--cor-primaria-clara);
+
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+
+    transform: translateY(-2px);
+
+}
+
+
+/* FOCUS */
+
+button:focus,
+.btn:focus {
+
+    outline: 3px solid var(--cor-secundaria);
+
+    outline-offset: 2px;
+
+}
+
+
+/* ACTIVE */
+
+button:active,
+.btn:active {
+
+    transform: translateY(0);
+
+    box-shadow: none;
+
+}
+
+
+/* DISABLED */
+
+button:disabled,
+.btn:disabled {
+
+    background-color: var(--cor-desabilitado);
+
+    border-color: var(--cor-desabilitado);
+
+    color: #757575;
+
+    cursor: not-allowed;
+
+    box-shadow: none;
+
+    transform: none;
+
+}
+
+
+/* =====================================================
+   10. AÇÕES
+   ===================================================== */
+
+.acoes {
+
+    display: flex;
+
+    justify-content: space-between;
+
+    align-items: center;
+
+    gap: var(--espaco-2);
+
+}
+
+
+/* =====================================================
+   11. FORMULÁRIO
+   ===================================================== */
+
+.formulario-container {
+
+    display: block;
+
+    max-width: 800px;
+
+    padding-top: var(--espaco-6);
+
+    padding-bottom: var(--espaco-6);
+
+}
+
+
+form {
+
+    display: flex;
+
+    flex-direction: column;
+
+    gap: var(--espaco-5);
+
+}
+
+
+fieldset {
+
+    border: 2px solid #DDDDDD;
+
+    border-radius: 8px;
+
+    padding: var(--espaco-5);
+
+    background-color: var(--cor-branca);
+
+}
+
+
+legend {
+
+    padding: 0 var(--espaco-2);
+
+    font-weight: bold;
+
+    color: var(--cor-primaria);
+
+}
+
+
+.form-grupo {
+
+    display: flex;
+
+    flex-direction: column;
+
+    gap: var(--espaco-2);
+
+    margin-bottom: var(--espaco-3);
+
+}
+
+
+label {
+
+    font-weight: bold;
+
+}
+
+
+input,
+select,
+textarea {
+
+    width: 100%;
+
+    border: 2px solid #BDBDBD;
+
+    border-radius: 6px;
+
+    padding: 10px;
+
+    font-family: inherit;
+
+    font-size: 1rem;
+
+    transition:
+        border-color 0.3s ease,
+        box-shadow 0.3s ease;
+
+}
+
+
+/* FOCUS */
+
+input:focus,
+select:focus,
+textarea:focus {
+
+    outline: none;
+
+    border-color: var(--cor-primaria);
+
+    box-shadow:
+        0 0 0 3px rgba(46, 125, 50, 0.2);
+
+}
+
+
+/* VALIDAÇÃO POSITIVA */
+
+input:valid,
+select:valid,
+textarea:valid {
+
+    border-color: var(--cor-sucesso);
+
+}
+
+
+/* VALIDAÇÃO NEGATIVA */
+
+input:invalid,
+select:invalid,
+textarea:invalid {
+
+    border-color: var(--cor-erro);
+
+}
+
+
+/* =====================================================
+   12. ALERTAS
+   ===================================================== */
+
+.alert {
+
+    padding: 16px;
+
+    border-radius: 6px;
+
+    margin: 16px 0;
+
+    font-weight: 500;
+
+}
+
+
+.alert-sucesso {
+
+    background-color: #E8F5E9;
+
+    color: #2E7D32;
+
+    border: 1px solid #4CAF50;
+
+}
+
+
+/* =====================================================
+   13. MODAL
+   ===================================================== */
+
+.modal {
+
+    display: none;
+
+    justify-content: center;
+
+    align-items: center;
+
+    position: fixed;
+
+    inset: 0;
+
+    background-color: rgba(0, 0, 0, 0.5);
+
+    z-index: 1000;
+
+}
+
+
+.modal.aberto {
+
+    display: flex;
+
+}
+
+
+.modal-conteudo {
+
+    position: relative;
+
+    width: 90%;
+
+    max-width: 500px;
+
+    padding: var(--espaco-6);
+
+    background-color: var(--cor-branca);
+
+    border-radius: 8px;
+
+    box-shadow:
+        0 8px 30px rgba(0, 0, 0, 0.25);
+
+}
+
+
+.modal-fechar {
+
+    margin-top: var(--espaco-3);
+
+}
+
+
+.modal-conteudo > .modal-fechar:first-child {
+
+    position: absolute;
+
+    top: 12px;
+
+    right: 12px;
+
+    padding: 4px 10px;
+
+    font-size: 24px;
+
+}
+
+
+/* =====================================================
+   14. FOOTER
+   ===================================================== */
+
+footer {
+
+    display: flex;
+
+    justify-content: space-between;
+
+    align-items: center;
+
+    flex-wrap: wrap;
+
+    gap: var(--espaco-3);
+
+    padding: var(--espaco-5);
+
+    margin-top: var(--espaco-7);
+
+    background-color: var(--cor-texto);
+
+    color: var(--cor-branca);
+
+}
+
+
+/* =====================================================
+   15. RESPONSIVIDADE
+   ===================================================== */
+
+
+/* CENÁRIO 1 - TELAS GRANDES */
+
+@media (min-width: 1440px) {
+
+    .container {
+
+        max-width: 1400px;
+
+        gap: 32px;
+
+    }
+
+}
+
+
+/* CENÁRIO 2 - DESKTOP MENOR */
+
+@media (max-width: 1199px) {
+
+    .container {
+
+        gap: 20px;
+
+    }
+
+}
+
+
+/* CENÁRIO 3 - TABLETS GRANDES */
+
+@media (max-width: 991px) {
+
+    .container {
+
+        grid-template-columns: repeat(8, 1fr);
+
+    }
+
+
+    .cards {
+
+        grid-template-columns: repeat(2, 1fr);
+
+    }
+
+}
+
+
+/* CENÁRIO 4 - TABLETS PEQUENOS */
+
+@media (max-width: 767px) {
+
+    .container {
+
+        grid-template-columns: repeat(4, 1fr);
+
+        gap: 16px;
+
+    }
+
+
+    .cards {
+
+        grid-template-columns: 1fr;
+
+    }
+
+
+    /* MENU HAMBÚRGUER */
+
+    .menu-toggle {
+
+        display: block;
+
+    }
+
+
+    .menu {
+
+        display: none;
+
+        width: 100%;
+
+        position: absolute;
+
+        top: 100%;
+
+        left: 0;
+
+        background-color: var(--cor-branca);
+
+        padding: var(--espaco-3);
+
+        box-shadow:
+            0 4px 10px rgba(0, 0, 0, 0.1);
+
+    }
+
+
+    .menu.active {
+
+        display: flex;
+
+    }
+
+
+    .menu ul {
+
+        flex-direction: column;
+
+        align-items: flex-start;
+
+        width: 100%;
+
+    }
+
+
+    .menu li {
+
+        width: 100%;
+
+    }
+
+
+    .menu a {
+
+        display: block;
+
+        width: 100%;
+
+    }
+
+
+    .dropdown:hover .submenu {
+
+        display: none !important;
+
+    }
+
+
+    .hero {
+
+        padding: var(--espaco-5);
+
+        min-height: 350px;
+
+    }
+
+
+    h1 {
+
+        font-size: 2rem;
+
+    }
+
+
+    h2 {
+
+        font-size: 1.6rem;
+
+    }
+
+}
+
+
+/* CENÁRIO 5 - CELULARES PEQUENOS */
+
+@media (max-width: 480px) {
+
+    .container {
+
+        grid-template-columns: 1fr;
+
+        gap: 12px;
+
+        width: 92%;
+
+    }
+
+
+    .secao-completa {
+
+        grid-column: span 1;
+
+    }
+
+
+    .hero {
+
+        padding: var(--espaco-4);
+
+    }
+
+
+    .hero h1 {
+
+        font-size: 1.8rem;
+
+    }
+
+
+    footer {
+
+        flex-direction: column;
+
+        text-align: center;
+
+    }
+
+
+    .card-projeto {
+
+        padding: var(--espaco-3);
+
+    }
+
+}
+.campo-valido {
+    border: 2px solid #2E7D32;
+}
+
+.campo-invalido {
+    border: 2px solid #D32F2F;
+}

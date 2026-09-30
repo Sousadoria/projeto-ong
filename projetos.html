@@ -1,0 +1,334 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>ONG Esperança - Projetos</title>
+
+    <link rel="stylesheet" href="css/style.css">
+
+</head>
+
+<body>
+
+
+    <!-- CABEÇALHO -->
+    <header>
+
+        <div class="logo">
+
+            <img
+                src="imagens/logo.png"
+                alt="Logo da ONG Esperança">
+
+        </div>
+
+
+        <button
+            class="menu-toggle"
+            aria-label="Abrir menu">
+
+            ☰
+
+        </button>
+
+
+        <nav class="menu">
+
+            <ul>
+
+                <li>
+                    <a href="index.html">
+                        Início
+                    </a>
+                </li>
+
+                <li class="dropdown">
+
+                    <a href="projetos.html">
+                        Projetos
+                    </a>
+
+                    <ul class="submenu">
+
+                        <li>
+                            <a href="#projetos">
+                                Projetos sociais
+                            </a>
+                        </li>
+
+                        <li>
+                            <a href="#campanhas">
+                                Campanhas
+                            </a>
+                        </li>
+
+                        <li>
+                            <a href="#voluntariado">
+                                Voluntariado
+                            </a>
+                        </li>
+
+                    </ul>
+
+                </li>
+
+                <li>
+                    <a href="index.html#doacoes">
+                        Doações
+                    </a>
+                </li>
+
+                <li>
+                    <a href="index.html#contato">
+                        Contato
+                    </a>
+                </li>
+
+                <li>
+                    <a href="cadastro.html">
+                        Cadastro
+                    </a>
+                </li>
+
+            </ul>
+
+        </nav>
+
+    </header>
+
+
+    <!-- CONTEÚDO -->
+    <main>
+
+        <section class="container secao-completa">
+
+            <h1>Nossos projetos</h1>
+
+            <p>
+                Conheça os projetos desenvolvidos pela ONG Esperança
+                e descubra como você pode participar.
+            </p>
+
+        </section>
+
+
+        <!-- PROJETOS -->
+        <section
+            id="projetos"
+            class="container secao-completa">
+
+            <h2>Projetos sociais</h2>
+
+
+            <div class="cards">
+
+
+                <!-- CARD 1 -->
+                <article class="card-projeto">
+
+                    <img
+                        src="imagens/acao-social.jpg"
+                        alt="Voluntários realizando ação social">
+
+                    <div class="card-info">
+
+                        <h3>Ação Social</h3>
+
+                        <span class="badge badge-ativo">
+                            Ativo
+                        </span>
+
+                        <p>
+                            Projeto destinado ao atendimento de
+                            famílias em situação de vulnerabilidade.
+                        </p>
+
+                        <div class="acoes">
+
+                            <button class="btn abrir-modal">
+                                Ver detalhes
+                            </button>
+
+                        </div>
+
+                    </div>
+
+                </article>
+
+
+                <!-- CARD 2 -->
+                <article class="card-projeto">
+
+                    <img
+                        src="imagens/doacao.jpg"
+                        alt="Voluntários organizando doações">
+
+                    <div class="card-info">
+
+                        <h3>Campanha de alimentos</h3>
+
+                        <span class="badge badge-ativo">
+                            Ativo
+                        </span>
+
+                        <p>
+                            Arrecadação de alimentos para famílias
+                            que necessitam de apoio.
+                        </p>
+
+                        <div class="acoes">
+
+                            <button class="btn abrir-modal">
+                                Ver detalhes
+                            </button>
+
+                        </div>
+
+                    </div>
+
+                </article>
+
+
+                <!-- CARD 3 -->
+                <article class="card-projeto">
+
+                    <img
+                        src="imagens/voluntariado.jpg"
+                        alt="Voluntários trabalhando em uma ação">
+
+                    <div class="card-info">
+
+                        <h3>Programa de voluntariado</h3>
+
+                        <span class="badge badge-ativo">
+                            Ativo
+                        </span>
+
+                        <p>
+                            Programa para pessoas interessadas em
+                            colaborar com as atividades da ONG.
+                        </p>
+
+                        <div class="acoes">
+
+                            <button class="btn abrir-modal">
+                                Ver detalhes
+                            </button>
+
+                        </div>
+
+                    </div>
+
+                </article>
+
+            </div>
+
+        </section>
+
+
+        <!-- CAMPANHAS -->
+        <section
+            id="campanhas"
+            class="container secao-completa">
+
+            <h2>Campanhas de doação</h2>
+
+            <div class="alert alert-sucesso">
+
+                Campanha de arrecadação aberta!
+                Ajude com alimentos, roupas ou produtos de higiene.
+
+            </div>
+
+            <p>
+                As doações são utilizadas para apoiar as famílias
+                atendidas pela organização.
+            </p>
+
+            <button class="btn">
+                Quero doar
+            </button>
+
+        </section>
+
+
+        <!-- VOLUNTARIADO -->
+        <section
+            id="voluntariado"
+            class="container secao-completa">
+
+            <h2>Voluntariado</h2>
+
+            <p>
+                Faça parte da nossa equipe de voluntários e ajude
+                a transformar vidas.
+            </p>
+
+            <a
+                href="cadastro.html"
+                class="btn">
+
+                Quero ser voluntário
+
+            </a>
+
+        </section>
+
+    </main>
+
+
+    <!-- MODAL -->
+    <div
+        class="modal"
+        id="modalProjeto"
+        aria-hidden="true">
+
+        <div class="modal-conteudo">
+
+            <button
+                class="modal-fechar"
+                aria-label="Fechar janela">
+
+                ×
+
+            </button>
+
+            <h2>Informações do projeto</h2>
+
+            <p>
+                Este projeto tem como objetivo arrecadar alimentos,
+                roupas e produtos de higiene para famílias em
+                situação de vulnerabilidade.
+            </p>
+
+            <button class="btn modal-fechar">
+                Fechar
+            </button>
+
+        </div>
+
+    </div>
+
+
+    <footer>
+
+        <p>
+            © 2026 ONG Esperança - Todos os direitos reservados.
+        </p>
+
+        <p>
+            Projeto acadêmico - Desenvolvimento Front-end
+        </p>
+
+    </footer>
+
+
+    <script src="js/script.js"></script>
+
+</body>
+
+</html>
